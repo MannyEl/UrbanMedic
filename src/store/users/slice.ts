@@ -14,6 +14,7 @@ const initialState: T.State = {
   isFetching: false,
   users: {
     info: {
+      page: 1,
       seed: "",
     },
     results: [],
@@ -26,7 +27,7 @@ const usersSlice = createSlice({
   reducers: {
     resetUsers: (state) => {
       state.users.results = [];
-      state.users.info = { seed: "" };
+      state.users.info = { page: 1, seed: "" };
     },
     addUsersFromLocalstorage: (state) => {
       const users: IUser[] = JSON.parse(getFromLocalStorage("users") || "[]");
@@ -59,6 +60,7 @@ const usersSlice = createSlice({
             key: "seed",
             value: action.payload.info.seed,
           });
+          state.users.info.page = action.payload.info.page;
           state.users.results.push(...action.payload.results);
           state.isFetching = false;
         }

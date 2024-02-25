@@ -3,7 +3,7 @@ import Button from "../ui/button/Button";
 import { getUserStore } from "../store/auth/selectors";
 import { AppDispatch } from "../store/types";
 import { useDispatch } from "react-redux";
-import userModalSlice from "../store/userModal/slice";
+import userModalSlice from "../store/userFormModal/slice";
 import authSlice from "../store/auth/slice";
 
 function Header() {

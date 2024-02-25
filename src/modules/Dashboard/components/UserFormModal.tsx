@@ -16,8 +16,8 @@ import { userFormSchema } from "../utils/schema";
 import TrashIcon from "../../../asssets/icons/TrashIcon";
 import CloseIcon from "../../../asssets/icons/CloseIcon";
 import { useSelector } from "react-redux";
-import { getUserModalMode } from "../../../store/userModal/selectors";
-import userModalSlice from "../../../store/userModal/slice";
+import { getUserModalMode } from "../../../store/userFormModal/selectors";
+import userModalSlice from "../../../store/userFormModal/slice";
 import { initialUser } from "../utils/constants";
 import clsx from "clsx";
 
